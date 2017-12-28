@@ -1,0 +1,258 @@
+
+// Default grid, change to fit your requirements.
+@columnWidth:   30;
+@gutterWidth:   10;
+@columns:       24;
+
+.inner-wrap {
+    @gridWidth: 900px;
+    @gridImage: "../img/grid950x24x30x10-nomargin.png";
+    //@gridImage: "../img/grid940x12x60x20-nomargin.png";
+    .grid(@gridWidth);
+
+    html.vgrid & {
+        .showGrid(@gridWidth, @gridImage);
+    }
+
+    //&.inner-wrap-footer,
+    &.inner-wrap-header {
+        @gridWidth: 100%;
+        .grid(@gridWidth);
+
+        html.vgrid & {
+            .showGrid(@gridWidth, @gridImage);
+        }
+    }
+}
+
+
+.hgrid,
+.route-typography {
+    background-image: url(../img/horisontal-grid-24---stronger.png);
+}
+
+.row {
+    .row();
+}
+
+// Variabler----------------------------
+
+
+@magicNumber: 16px;
+@sidebarsAndMainPadding: @magicNumber / 4;
+
+// Styla allt ---------------------------
+
+.wrap-all {
+    background-color: #168a7f;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// Styla mellanrum mellan header, main och footer
+
+.outer-wrap-header,
+.outer-wrap-main,
+.footer-column-wrapper {
+    margin-bottom: @magicNumber;
+}
+
+.footer-column-wrapper {
+    .clearfix();
+}
+
+
+
+// Styla header -------------------------
+
+.outer-wrap-header {
+    background-color: turquoise;
+    height: @magicNumber * 4;
+}
+
+.logo-1 {
+    // position: absolute;
+    // left: 100px;
+    // top: 100px;
+}
+
+.site-logo-text {
+    .column(6);
+
+    font-size: 2em;
+    a {
+        text-decoration: none;
+    }
+}
+
+.navbar2 {
+    .column(18);
+
+    a {
+        text-decoration: none;
+    }
+}
+//--------------------
+
+@maxButtonFontSize: 2em;  // Hamburgarknappens storlek ---Variable from responsive-menu.less i modules
+@navbarItemBgColor: #40e080;  // Variable from responsive-menu.less i modules
+
+// Styla flash -------------------------
+
+.outer-wrap-flash img {
+    .column(24);
+}
+
+
+
+// Styla main och sidebars-----------------
+
+.sidebar-left,
+.main,
+.sidebar-right {
+    box-sizing: border-box;
+    padding-left: @sidebarsAndMainPadding;
+    padding-right: @sidebarsAndMainPadding;
+}
+
+// main--------------------------------
+.main {
+    .column(16);
+    //.push(1);
+    background-color: turquoise;
+}
+
+// main--------------------------------
+.route-report,
+.route-report-intro,
+.route-report-kmom01,
+.route-report-kmom02,
+.route-report-kmom03,
+.route-report-kmom04,
+.route-report-kmom05,
+.route-report-kmom06,
+.route-report-kmom10, {
+    & .sidebar-left {
+        .column(4);
+        background-color: #40e080;
+    }
+}
+
+// about--------------------------------
+.route- {
+    & .main {
+        .push(4);
+    }
+}
+
+// about--------------------------------
+.route-about {
+    & .main {
+        .push(4);
+    }
+}
+
+// grid--------------------------------
+.route-grid {
+    & .sidebar-right {
+        .column(4);
+        background-color: #40e080;
+    }
+    & .main {
+        .push(4);
+    }
+    & * {
+        opacity: 0.9;
+    }
+}
+
+// typography----------------------------
+.route-typography {
+    //background-image: url(../img/horisontal-grid-24---stronger.png) !important;
+    & * {
+        opacity: 0.9;
+    }
+    & .main {
+        .push(4);
+    }
+}
+
+
+// Styla footer -------------------------
+
+.footer-column {
+    .column(@columns/3);
+
+    background-color: #e04050;
+    //opacity: 0.5;
+}
+
+.site-footer {
+    .column(@columns);
+
+    background-color: #40a0e0;
+    // opacity: 0.5;
+    // color: white;
+    text-align: center;
+
+    a {
+        //color: yellow;
+    }
+}
+
+.outer-wrap-footer {
+    background-color: black;
+    //color: white;
+    padding-top: @magicNumber;
+    padding-bottom: @magicNumber;
+}
+
+/** --------------------------------------------------------------
+ *  Responsive design
+ */
+
+@media screen and (max-width: 900px) {
+    .site-logo-text {
+        width: 40%;
+    }
+
+    .navbar2 {
+        width: 50%;
+    }
+
+    .profile {
+        width: 10%;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .sidebar {
+        //width: 100%;
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .footer-column {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 690px) {
+    .site-logo-text {
+        width: 90%;
+    }
+
+    .navbar2 {
+        display: none;
+    }
+}

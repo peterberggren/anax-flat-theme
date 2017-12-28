@@ -1,0 +1,21 @@
+/**
+ * Wrap grid in a container.
+ */
+.grid(@maxWidth: 1100px) {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: @maxWidth;
+}
+
+
+/**
+ * Show grid.
+*/
+.showGrid(@maxWidth: 900px, @gridImage) {
+    background: url("@{gridImage}") repeat-y fixed center center;
+    background-size: 100% auto;
+
+    @media (min-width: @maxWidth) {
+        background-size: @maxWidth auto;
+    }
+}
