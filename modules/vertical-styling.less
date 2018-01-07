@@ -1,0 +1,417 @@
+//----------------------------------------------------------------
+//----- Från style.less -----------------------------------
+//----------------------------------------------------------------
+
+
+.logo-1 {
+    display: none;
+    //position: absolute;
+    //top: 70px;
+    //left: -140px;
+}
+
+.site-logo-text-icon {
+    img {
+        vertical-align: bottom;
+    }
+}
+
+.site-logo-text {
+    padding: 3px;
+}
+
+//----------------------------------------------------------------
+//----- Från layout.less -----------------------------------
+//----------------------------------------------------------------
+
+
+// -------Egna Variabler---------------------------------
+
+@paddingInTextAreas: @magicNumber / 4;  // Min egen variabel
+
+@colorAll: black;
+@bColorAll: white;
+@linkColorAll: blue;
+@visitedColorAll: purple;
+@hoverColorAll: yellow;
+@activeColorAll: red;
+
+@bColorHeader: white;
+
+@colorMain: black;
+@bColorMain: white;
+@bColorOuterWrapMain: white;
+
+@linkColorMainAndSidebar: blue;
+@visitedColorMainAndSidebar: purple;
+@hoverColorMainAndSidebar: yellow;
+@activeColorMainAndSidebar: red;
+
+@colorSidebar: black;
+@bColorSidebar: white;
+
+@bColorFooterCols: white;
+@bColorSiteFooter: white;
+@bColorFooterOuter: white;
+
+// -----Variabler från responsive-menu.less -------------
+
+// General
+//@navbarAccentColor:         #9FB129;
+@navbarItemBgColor:             white;
+// @navbarItemColor:           inherit;
+// @navbarItemHoverColor:      inherit; //lighten(@navbarItemColor, 20%);
+// @navbarItemHoverBgColor:    inherit; //#666;
+//
+// // Menu item current/selected
+// @navbarItemSelectedColor:       inherit;
+// @navbarItemSelectedBgColor:     inherit;
+// //@navbarItemSelectedBorderColor: darken(lime, 10%);
+//
+// // Mobile button
+// //@navbarMobileItemBorderColor:           #eee;
+// //@navbarMobileItemHoverBorderColor:      @navbarAccentColor;
+// //@navbarMobileBorderColor:               #ddd;
+//
+// // The menu button
+// @navbarMenuButtonColor:         inherit;
+// @navbarMenuButtonBgColor:       transparent;
+// //@navbarMenuButtonBorderColor:   #999;
+//
+// // The menu button hover
+// @navbarMenuButtonHoverColor:         @navbarMenuButtonColor;
+// @navbarMenuButtonHoverBgColor:       @navbarMenuButtonBgColor;
+// //@navbarMenuButtonHoverBorderColor:   #333;
+//
+// // The menu button clicked
+// @navbarMenuButtonClickedColor:          #9FB129;
+// @navbarMenuButtonClickedBgColor:        @navbarMenuButtonHoverBgColor;
+// //@navbarMenuButtonClickedBorderColor:    lime;
+//
+// // Submenu
+// @submenuZIndex:             9999;
+// @submenuBgColor:            @navbarItemBgColor;
+// @submenuMinWidth:           10em;
+// @submenuItemBorderColor:    #eee;
+//
+// // Mobile menu
+// @mobileBgColor:     #444;
+// @mobileColor:       #fff;
+//
+// // Max menu
+// @maxBgColor:                #131313;
+// @maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
+// @maxButtonFontSize:         1em;
+// @maxButtonColor:            inherit;
+// @maxButtonClickedColor:     @navbarMenuButtonClickedColor;
+// @maxButtonSubmenuBgColor:    #444;
+// @maxButtonSubmenuHoverBgColor: #ccc;
+
+
+// -----Slut variabler från responsive-menu.less -------------
+
+
+// Styla allt ---------------------------
+
+.wrap-all {
+    background-color: @bColorAll;
+    color: @colorAll;
+    & a:link {
+        color: @linkColorAll;
+    }
+    & a:visited {
+        color: @visitedColorAll;
+    }
+    & a:hover {
+        color: @hoverColorAll;
+    }
+    & a:active {
+        color: @activeColorAll;
+    }
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// Styla mellanrum mellan header, main och footer
+
+.outer-wrap-header,
+.outer-wrap-main {
+    margin-bottom: @magicNumber;
+}
+
+.footer-column-wrapper {
+    margin-bottom: @magicNumber / 2;
+    .clearfix();
+}
+
+
+
+// Styla header -------------------------
+
+.outer-wrap-header {
+    background-color: @bColorHeader;
+}
+
+.logo-1 {
+    // position: absolute;
+    // left: 100px;
+    // top: 100px;
+}
+
+.site-logo-text {
+    .column(6);
+
+    //font-size: 1.5em;
+    a {
+        text-decoration: none;
+    }
+}
+
+.navbar2 {
+    .column(16);
+
+    a {
+        text-decoration: none;
+    }
+}
+
+
+// Styla flash -------------------------
+
+.outer-wrap-flash img {
+    .column(24);
+}
+
+// Styla breadcrumb -------------------------
+
+.breadcrumb-list {
+    margin-bottom: 22px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    li {
+        display: inline;
+
+        &::after {
+            content: " » ";
+        }
+    }
+}
+
+.next-previous {
+    .next,
+    .previous {
+        width: 50%;
+    }
+
+    .next {
+        float: right;
+        text-align: right;
+    }
+}
+
+
+// Styla main och sidebars-----------------
+
+.sidebar-left,
+.main,
+.sidebar-right,
+.footer-column,
+.site-footer,
+.breadcrumb-list {
+    box-sizing: border-box;
+    padding-left: @paddingInTextAreas;
+    padding-right: @paddingInTextAreas;
+}
+
+.outer-wrap-main {
+  background-color: @bColorOuterWrapMain;
+}
+
+.main,
+.sidebar-left,
+.sidebar-right {
+    & a:link {
+        color: @linkColorMainAndSidebar;
+    }
+    & a:visited {
+        color: @visitedColorMainAndSidebar;
+    }
+    & a:hover {
+        color: @hoverColorMainAndSidebar;
+    }
+    & a:active {
+        color: @activeColorMainAndSidebar;
+    }
+}
+
+.main {
+    color: @colorMain;
+    background-color: @bColorMain;
+}
+
+.sidebar-left,
+.sidebar-right {
+    color: @colorSidebar;
+    background-color: @bColorSidebar;
+}
+
+//----------------------------------------------------------------
+//----- Styla regioner vertikalt ---------------------------------
+//----------------------------------------------------------------
+
+// main och sidebar --------------------------------
+
+.main {
+    .column(16);
+}
+
+.sidebar-left {
+    .push(4);
+}
+
+.route-report,
+.route-report-intro,
+.route-report-kmom01,
+.route-report-kmom02,
+.route-report-kmom03,
+.route-report-kmom04,
+.route-report-kmom05,
+.route-report-kmom06,
+.route-report-kmom10, {
+    & .sidebar-left {
+        .column(4);
+    }
+}
+
+.route-analysis,
+.route-analysis-intro,
+.route-analysis-colorscheme {
+    & .sidebar-left {
+        .column(4);
+    }
+}
+
+// about--------------------------------
+.route- {
+    & .main {
+        .push(4);
+    }
+}
+
+// about--------------------------------
+.route-about {
+    & .main {
+        .push(4);
+    }
+}
+
+// grid--------------------------------
+.route-grid {
+    & .sidebar-right {
+        .column(4);
+        background-color: @bColorSidebar;
+    }
+    & .main {
+        .push(4);
+    }
+    & * {
+        opacity: 0.9;
+    }
+}
+
+// typography----------------------------
+.route-typography {
+    //background-image: url(../img/horisontal-grid-24---stronger.png) !important;
+    & * {
+        opacity: 0.9;
+    }
+    & .main {
+        .push(4);
+    }
+}
+
+// theme--------------------------------
+.route-theme {
+    & .main {
+        .push(4);
+    }
+}
+
+.route-theme-selector {
+    & .main {
+        .push(4);
+    }
+}
+
+
+// Styla footer -------------------------
+
+.footer-column {
+    ul {
+        margin: 0;
+        padding: 1em;
+        list-style-type: circle;
+        padding-top: 0;
+    }
+}
+
+
+.footer-column-wrapper {
+    display: table;
+    width: 100%;
+    overflow: auto;
+}
+
+.footer-column {
+    .column(@columns/3);
+    display: table-cell;
+    background-color: @bColorFooterCols;
+    //opacity: 0.5;
+}
+
+.site-footer {
+    .column(@columns);
+
+    background-color: @bColorSiteFooter;
+    text-align: center;
+    padding: @paddingInTextAreas;
+
+    a {
+        //color: yellow;
+    }
+    text-align: center;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-type: none;
+    }
+
+    li {
+        display: inline;
+    }
+}
+
+.outer-wrap-footer {
+    background-color: @bColorFooterOuter;
+    padding-top: @magicNumber;
+    padding-bottom: @magicNumber;
+
+    & p {
+        margin: @magicNumber / 2;
+    }
+    & h4 {
+        margin: @magicNumber / 2;
+    }
+}

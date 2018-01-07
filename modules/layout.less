@@ -39,7 +39,7 @@
 
 
 @magicNumber: 16px;
-@sidebarsAndMainPadding: @magicNumber / 4;
+@sidebarsAndMainPadding: @magicNumber / 4;  // Min egen variabel
 
 // Styla allt ---------------------------
 
@@ -211,48 +211,4 @@
     //color: white;
     padding-top: @magicNumber;
     padding-bottom: @magicNumber;
-}
-
-/** --------------------------------------------------------------
- *  Responsive design
- */
-
-@media screen and (max-width: 900px) {
-    .site-logo-text {
-        width: 40%;
-    }
-
-    .navbar2 {
-        width: 50%;
-    }
-
-    .profile {
-        width: 10%;
-    }
-}
-
-
-@media screen and (max-width: 750px) {
-    .sidebar {
-        //width: 100%;
-        display: none;
-    }
-}
-
-
-@media screen and (max-width: 700px) {
-    .footer-column {
-        width: 100%;
-    }
-}
-
-
-@media screen and (max-width: 690px) {
-    .site-logo-text {
-        width: 90%;
-    }
-
-    .navbar2 {
-        display: none;
-    }
 }

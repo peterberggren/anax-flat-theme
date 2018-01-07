@@ -1,0 +1,186 @@
+//----------------------------------------------------------------
+//----- Från modules/typo/typography.less ------------------
+//----------------------------------------------------------------
+
+//@import "typography-font-families.less";
+// @import "typography-sizes.less";
+// @import "typography-mixins.less";
+// @import "typography-defaults.less";
+
+@import url(typo/typography-font-families.less);
+@import url(typo/typography-sizes.less);
+@import url(typo/typography-mixins.less);
+@import url(typo/typography-defaults.less);
+
+
+// *,
+// *::before,
+// *::after {
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+// }
+
+nav div ul a {
+    @height: 48px;
+    .calcMargin(@height);
+
+    padding-top: @margin / 2 !important;
+    padding-bottom: @margin / 2 !important;
+}
+
+
+.flash-wrap,
+.outer-wrap-flash,
+.inner-wrap-flash {
+    @height: 180px;
+
+    height: 180px;
+    .calcMargin(@height);
+
+    margin-bottom: @margin !important;
+}
+
+.breadcrumb-list ul {
+    margin-top: 0 !important;
+}
+
+
+.code {
+    @height: 100px;
+
+    height: 100px;
+    .calcMargin(@height);
+
+    padding-top: @margin / 2 - 1 !important;
+    padding-bottom: @margin / 2 - 1 !important;
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+}
+
+.outer-wrap-header {
+    height: @magicNumber * 3;
+    //margin-bottom: @magicNumber;
+}
+
+
+body {
+    .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+    //background-image: url(../img/horisontal-grid-24---stronger.png);
+}
+
+
+//These variables are set in other files in this folder
+//and can be changed here
+
+// @fontSizeH1: 2.375em;
+// @fontSizeH2: 1.875em;
+// @fontSizeH3: 1.375em;
+// @fontSizeH4: 1.25em;
+// @fontSizeH5: 1em;
+// @fontSizeH6: 0.875em;
+//
+// @fontSizeCodeInline:  1.25em;
+// @fontSizeCodeBlock:   1.25em;
+// @lineHeightCodeBlock: 1.6;
+@fontSizeCodeInline:  1em;
+@fontSizeCodeBlock:   1em;
+@lineHeightCodeBlock: @lineHeight;
+//
+// @fontSizeSupSub: 0.75em;
+//
+// @fontSizeSmall: 0.875em;
+//
+// // Monospace
+// @fontFamilyCourier:         "Courier New", Courier, monospace;
+// @fontFamilyMonospace:       monospace;
+//
+// // Serif
+// @fontFamilyCambria:         Cambria, Georgia, Times, 'Times New Roman', serif;
+// @fontFamilyTimes:           Times, 'Times New Roman', serif;
+// @fontFamilyGaramond:        Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, "Times New Roman", Times, serif;
+//
+// // Sans-serif
+// @fontFamilyHelvetica:       Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @fontFamilyCalibri:         Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @fontFamilyMyriadPro:       MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
+// @fontFamilyHelveticaNeue:   "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @fontFamilyArial:           Arial, sans-serif;
+//
+//
+// // ------Google fonts ---------------------
+// @fontFamilyBoogaloo: Boogaloo;
+// @fontFamilyShare: Share;
+// @fontFamilyShadowsIntoLightTwo: "Shadows Into Light Two";
+// @fontFamilyNeucha: Neucha;
+// @fontFamilyRoboto: Roboto;
+// @fontFamilyEconomica: Economica;
+
+
+
+//
+// /**
+//  * Default font-families
+//  */
+// @fontFamilyHeadings:  @fontFamilyCambria;
+// @fontFamilyBody:      @fontFamilyCalibri;
+// @fontFamilyCode:      @fontFamilyCourier;
+
+@fontFamilyHeadings:  @fontFamilyTimes;
+@fontFamilyBody:      @fontFamilyHelvetica;
+@fontFamilyCode:      @fontFamilyMonospace;
+//
+// /**
+//  * Typographic defaults.
+//  */
+
+/**
+ * Typographic defaults.
+ */
+// @colorH1BorderBottom: #666;
+// @colorH2BorderBottom: #999;
+
+// @borderSizeH1: 1px;
+// @borderSizeH2: 1px;
+
+
+/**
+ * Text elements
+ */
+// @colorTypographyMark: #000;
+// @bgColorTypographyMark:  #ffff99;
+//
+// @colorBlockquoteBorder: #eee;
+// @sizeBlockquoteBorder: 4px;
+
+/**
+ * Display source code.
+ */
+// @borderColorCodeInline: #ccc;
+// @bgColorCodeInline:     #eee;
+// @bgColorCodeBlock:      #eee;
+// @colorCodeBlockBorder:  #ccc;
+// @borderSizeCodeblock:   1px;
+
+/**
+ * Typographic mixins.
+ */
+// .font(@fontSize: 100.01%, @fontFamily: @fontFamilyBody) {
+//     font: @fontSize/@lineHeight @fontFamily;
+// }
+// .font(@fontSize: 97.60%, @fontFamily: @fontFamilyBody) {
+//     font: @fontSize/@lineHeight @fontFamily;
+// }
+//
+// .fontSize(@fontSize) {
+//     font-size: @fontSize;
+//     line-height: @lineHeight / unit(@fontSize) * ceil(unit(@fontSize) / @lineHeight);
+// }
+
+// 5/4 for smaller font-size, incremental leading.
