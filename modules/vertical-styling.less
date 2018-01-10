@@ -20,6 +20,11 @@
     padding: 3px;
 }
 
+.author-byline {
+    border: 2px solid black;
+    clear: both;
+}
+
 //----------------------------------------------------------------
 //----- Från layout.less -----------------------------------
 //----------------------------------------------------------------
@@ -165,7 +170,7 @@
 }
 
 .site-logo-text {
-    .column(6);
+    .column(4);
 
     //font-size: 1.5em;
     a {
@@ -174,7 +179,7 @@
 }
 
 .navbar2 {
-    .column(16);
+    .column(18);
 
     a {
         text-decoration: none;
@@ -296,14 +301,16 @@
 
 .route-analysis,
 .route-analysis-intro,
-.route-analysis-colorscheme {
+.route-analysis-colorscheme,
+.route-analysis-speed-and-usability {
     & .sidebar-left {
         .column(4);
     }
 }
 
-// about--------------------------------
-.route- {
+// anax-flat och images--------------------------------
+.route-,
+.route-images {
     & .main {
         .push(4);
     }
@@ -327,6 +334,20 @@
     }
     & * {
         opacity: 0.9;
+    }
+}
+
+// blog--------------------------------
+.route-blogg,
+.route-blogg-mitt-forsta-blogginlagg,
+.route-blogg-mitt-andra-blogginlagg,
+.route-blogg-mitt-tredje-blogginlagg {
+    & .sidebar-right {
+        .column(4);
+        background-color: @bColorSidebar;
+    }
+    & .main {
+        .push(4);
     }
 }
 
@@ -414,4 +435,8 @@
     & h4 {
         margin: @magicNumber / 2;
     }
+}
+
+.meta-footer {
+    clear: both;
 }

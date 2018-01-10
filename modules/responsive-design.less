@@ -1,7 +1,70 @@
+@import url(figure.less);
+
+
 /** --------------------------------------------------------------
  *  Responsive design
  */
 
+ @media screen and (max-width: 1055px) {
+     .site-logo-text {
+        //width: 20%;
+        display: none;
+     }
+
+     .navbar2 {
+        width: 90%;
+        .push(1);
+     }
+
+     .profile {
+         width: 10%;
+     }
+
+ }
+
+ @media screen and (max-width: 890px) {
+     .site-logo-text {
+        width: 20%;
+        display: inline;
+     }
+
+     .navbar2 {
+        display: none;
+     }
+
+     .profile {
+         width: 10%;
+     }
+ }
+
+ @media screen and (max-width: 890px) {
+     .sidebar-left,
+     .sidebar-right {
+         display: none !important;
+     }
+     .site-logo-text {
+         width: 90%;
+     }
+     .navbar2 {
+         display: none;
+     }
+ }
+
+ @media screen and (max-width: 700px) {
+     .footer-column {
+         width: 100%;
+     }
+ }
+
+
+
+
+
+ //----------------------------------------------------------------
+ //---------- Äldre version ---------------------------------------
+ //----------------------------------------------------------------
+
+/*
 img {
     max-width: 100%;
 }
@@ -37,10 +100,10 @@ img {
         width: 100%;
     }
 }
-
+*/
 
 //----------------------------------------------------------------
-//---------- Äldre version ---------------------------------------
+//---------- Ännu äldre version ---------------------------------------
 //----------------------------------------------------------------
 
 /*
