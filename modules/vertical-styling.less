@@ -18,6 +18,7 @@
 
 .site-logo-text {
     padding: 3px;
+    //display: none!important;
 }
 
 .author-byline {
@@ -180,6 +181,7 @@
 
 .navbar2 {
     .column(18);
+    font-size: 85%;
 
     a {
         text-decoration: none;
@@ -241,6 +243,7 @@
 
 .outer-wrap-main {
   background-color: @bColorOuterWrapMain;
+
 }
 
 .main,
@@ -270,6 +273,9 @@
     color: @colorSidebar;
     background-color: @bColorSidebar;
 }
+
+
+
 
 //----------------------------------------------------------------
 //----- Styla regioner vertikalt ---------------------------------
@@ -302,7 +308,8 @@
 .route-analysis,
 .route-analysis-intro,
 .route-analysis-colorscheme,
-.route-analysis-speed-and-usability {
+.route-analysis-speed-and-usability,
+.route-analysis-design-principles {
     & .sidebar-left {
         .column(4);
     }
@@ -310,7 +317,9 @@
 
 // anax-flat och images--------------------------------
 .route-,
-.route-images {
+.route-images,
+.route-design-element,
+.route-design-principle {
     & .main {
         .push(4);
     }
