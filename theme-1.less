@@ -1,0 +1,141 @@
+// base.less
+@import url(normalize.less);
+
+@import url(grid-float.less);
+
+@import url(grid-helpers.less);
+
+@import url(responsive-menu.less);
+
+@import url(activate-grids.less);
+
+@import url(vertical-styling.less);
+
+@import url(horisontal-styling.less);
+
+
+// -------Egna Variabler --- använder arrifana-mörk-------------------
+
+
+@paddingInTextAreas: @magicNumber / 4;  // Min egen variabel
+
+@accentColor: #2c7f6e;
+
+@colorAll: white;
+@bColorAll: #4c3325;
+
+@linkColorAll: #f0eede;
+@visitedColorAll: #d0c0a3;
+@hoverColorAll: #2c7f6e;
+@activeColorAll: #f0d5ad;
+
+@bColorHeader: #33221c;
+
+@colorMain: black;
+@bColorMain: #d0c0a3;
+@bColorOuterWrapMain: #4c3325;
+
+@linkColorMainAndSidebar: black;
+@visitedColorMainAndSidebar: #1c332e;
+@hoverColorMainAndSidebar: #7f4c39;
+@activeColorMainAndSidebar: #7f5e53;
+
+@colorSidebar: black;
+@bColorSidebar: #d0c0a3;
+
+@bColorFooterCols: #4c3325;
+@bColorSiteFooter: #4c3325;
+@bColorFooterOuter: #33221c;
+
+@fontFamilyHeadings:  @fontFamilyBoogaloo;
+@fontFamilyBody:      @fontFamilyRoboto;
+@fontFamilyCode:      @fontFamilyMonospace;
+
+
+// --Styla bakgrunder mm. för kmom06 --- theme-1-3 ------------------
+
+@bImageMainAndFooters: url("../img/design/sand3-bg.jpg");
+
+//.wrap-all,
+//.outer-wrap,
+.footer-column,
+.site-footer ,
+//.outer-wrap-main,
+.main {
+    background-image: @bImageMainAndFooters;
+}
+
+.flash-wrap img {
+    opacity: 0.2;
+}
+
+.sidebar-right,
+.sidebar-left,
+.main,
+.footer-column,
+.site-footer,
+.flash-wrap img {
+    border-left: 10px solid @accentColor;
+}
+
+// -----Variabler från responsive-menu.less -------------
+
+// General
+//@navbarAccentColor:         #9FB129;
+@navbarItemBgColor: #4c3325;
+// @navbarItemColor:           inherit;
+// @navbarItemHoverColor:      inherit; //lighten(@navbarItemColor, 20%);
+@navbarItemHoverBgColor:    @accentColor;
+//
+// // Menu item current/selected
+// @navbarItemSelectedColor:       inherit;
+// @navbarItemSelectedBgColor:     inherit;
+// //@navbarItemSelectedBorderColor: darken(lime, 10%);
+//
+// // Mobile button
+// //@navbarMobileItemBorderColor:           #eee;
+// //@navbarMobileItemHoverBorderColor:      @navbarAccentColor;
+// //@navbarMobileBorderColor:               #ddd;
+//
+// // The menu button
+// @navbarMenuButtonColor:         inherit;
+// @navbarMenuButtonBgColor:       transparent;
+// //@navbarMenuButtonBorderColor:   #999;
+//
+// // The menu button hover
+// @navbarMenuButtonHoverColor:         @navbarMenuButtonColor;
+// @navbarMenuButtonHoverBgColor:       @navbarMenuButtonBgColor;
+// //@navbarMenuButtonHoverBorderColor:   #333;
+//
+// // The menu button clicked
+// @navbarMenuButtonClickedColor:          #9FB129;
+// @navbarMenuButtonClickedBgColor:        @navbarMenuButtonHoverBgColor;
+// //@navbarMenuButtonClickedBorderColor:    lime;
+//
+// // Submenu
+// @submenuZIndex:             9999;
+// @submenuBgColor:            @navbarItemBgColor;
+// @submenuMinWidth:           10em;
+// @submenuItemBorderColor:    #eee;
+//
+// // Mobile menu
+// @mobileBgColor:     #444;
+// @mobileColor:       #fff;
+//
+// // Max menu
+// @maxBgColor:                #131313;
+// @maxMenuItemClickedBgColor: transparent; //@navbarMenuButtonClickedColor;
+@maxButtonFontSize:         2em;
+// @maxButtonColor:            inherit;
+// @maxButtonClickedColor:     @navbarMenuButtonClickedColor;
+// @maxButtonSubmenuBgColor:    #444;
+// @maxButtonSubmenuHoverBgColor: #ccc;
+
+
+// -----Slut variabler från responsive-menu.less -------------
+
+//----------------------------------------------------------------
+//----- responsive-design.less måste ligga sist ------------------
+//----------------------------------------------------------------
+
+@import url(responsive-design.less);
