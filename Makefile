@@ -151,7 +151,7 @@ less-lint: less
 # target: npm-install        - Install npm development npm packages.
 # target: npm-update         - Update npm development npm packages.
 # target: npm-version        - Display version for each npm package.
-.PHONY: npm-installl npm-update npm-version
+.PHONY: npm-install npm-update npm-version
 npm-install:
 	@$(call HELPTEXT,$@)
 	npm install
