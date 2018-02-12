@@ -155,6 +155,185 @@
 
 // -----Slut variabler från responsive-menu.less -------------
 
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+//----------------------------------------------------------------
+//----- Styla regioner vertikalt ---------------------------------
+//----------------------------------------------------------------
+
+// main och sidebar --------------------------------
+
+.main {
+    .column(16);
+}
+
+.sidebar-left {
+    .push(0);
+}
+
+// med vänster-sidebar--------------------------------
+.route-report,
+.route-report-intro,
+.route-report-kmom01,
+.route-report-kmom02,
+.route-report-kmom03,
+.route-report-kmom04,
+.route-report-kmom05,
+.route-report-kmom06,
+.route-report-kmom10,
+.route-analysis,
+.route-analysis-intro,
+.route-analysis-colorscheme,
+.route-analysis-speed-and-usability,
+.route-analysis-design-principles,
+.route-analysis-usability {
+    & .sidebar-left {
+        .column(4);
+    }
+    & .main {
+        //.push(4);
+        .column(20);
+    }
+}
+
+.route-analysis,
+.route-analysis-intro,
+.route-analysis-colorscheme,
+.route-analysis-speed-and-usability,
+.route-analysis-design-principles,
+.route-analysis-usability {
+    & .sidebar-left {
+        .column(4);
+    }
+}
+
+// utan sidebars--------------------------------
+.route-,
+.route-about,
+.route-theme-selector,
+.route-theme,
+.route-images,
+.route-design-element,
+.route-design-principle {
+    & .main {
+        //.push(4);
+        .column(24);
+    }
+}
+
+// med höger-sidebar--------------------------------
+
+
+// grid--------------------------------
+.route-grid {
+    & .sidebar-right {
+        .column(4);
+        background-color: @bColorSidebar;
+    }
+    & .main {
+        .push(0);
+        .column(20);
+    }
+    & * {
+        opacity: 0.9;
+    }
+}
+
+// blog--------------------------------
+.route-blogg,
+.route-blogg-mitt-forsta-blogginlagg,
+.route-blogg-mitt-andra-blogginlagg,
+.route-blogg-mitt-tredje-blogginlagg {
+    & .sidebar-right {
+        .column(4);
+        background-color: @bColorSidebar;
+    }
+    & .main {
+        .push(0);
+        .column(20);
+    }
+}
+
+// typography----------------------------
+.route-typography {
+    //background-image: url(../img/horisontal-grid-24---stronger.png) !important;
+    & * {
+        opacity: 0.9;
+    }
+    & .main {
+        //.push(4);
+        .column(24);
+    }
+}
+
+
+// Styla footer ------------------------------------------------------------
+//--------------------------------------------------------------------------
+
+.footer-column {
+    ul {
+        margin: 0;
+        padding: 1em;
+        list-style-type: circle;
+        padding-top: 0;
+    }
+}
+
+
+.footer-column-wrapper {
+    display: table;
+    width: 100%;
+    overflow: auto;
+}
+
+.footer-column {
+    .column(@columns/3);
+    display: table-cell;
+    background-color: @bColorFooterCols;
+    //opacity: 0.5;
+}
+
+.site-footer {
+    .column(@columns);
+
+    background-color: @bColorSiteFooter;
+    text-align: center;
+    padding: @paddingInTextAreas;
+
+    a {
+        //color: yellow;
+    }
+    text-align: center;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-type: none;
+    }
+
+    li {
+        display: inline;
+    }
+}
+
+.outer-wrap-footer {
+    background-color: @bColorFooterOuter;
+    padding-top: @magicNumber;
+    padding-bottom: @magicNumber;
+
+    & p {
+        margin: @magicNumber / 2;
+    }
+    & h4 {
+        margin: @magicNumber / 2;
+    }
+}
+
+.meta-footer {
+    clear: both;
+}
+//&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
 //----------------------------------------------------------------
 //----- responsive-design.less måste ligga sist ------------------
 //----------------------------------------------------------------
